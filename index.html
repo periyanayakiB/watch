@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Smart Watch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d6361dc0d5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="column1">
+           <h1>Smartwatch</h1>
+        </div>
+        <div class="column2">
+            <div class="image">
+                <img src="/assets/watch.png">
+                <div class="dial">
+                    <div class="home" id="currentTime" onclick="handleHomeClick()"></div>
+                    <div id="main" style="visibility: visible;">
+                        <div class="dialTime" id="currentTimeCenter"></div>
+                        <div class="day" id="currentDay"></div>
+                        <div class="weather">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <nav>
+                            <i class="fas fa-comment-dots" onclick="showMessages()"></i>
+                            <i class="fas fa-music" onclick="playMusic()"></i>
+                            <i class="far fa-clock"onclick="stopWatch()"></i>
+                        </nav>
+                        <!-- stopwatch------------- -->
+                        <div id="stopwatch"  style="visibility: hidden;">
+                            <span id="count">00</span>
+                            <nav class="countdown">
+                                <span id="hr" class="number">00</span><span class="txt">:</span>
+                                <span id="min" class="number">00</span><span class="txt">:</span>
+                                <span id="sec" class="number">00</span>
+                            </nav>
+                            <nav class="timer">
+                                <i class="fa-solid fa-pause" onclick="stop()" id="pause"></i>
+                                <i class="fa-solid fa-play" onclick="start()" id="start"></i>
+                                <i class="fa-solid fa-arrow-rotate-right" onclick="reset()"></i>
+                            </nav>
+                        </div>
+
+                        <!-- Messages------------ -->
+                        <div id="message" style="visibility:hidden;">
+                            <div class="message_content">
+                                <p onclick="messageDisplay()">Nayaki</p><br>
+                                <hr />
+                                <p onclick="messageDisplay()">Anjana</p><br>
+                                <hr />
+                                <p onclick="messageDisplay()">Navina</p><br>
+                                <hr />
+                                <p onclick="messageDisplay()">Ragul</p><br>
+                                <hr />
+                                <p onclick="messageDisplay()">Sandeep</p><br>
+                            
+                            </div>
+                            <div  id="displaymessage" style="visibility:hidden">
+                              <p>Your order will be delivered today</p>
+                            </div>
+                        </div>
+
+                        <!-- musics------------ -->
+                        <div id="music"style="visibility:hidden;">
+                            <h1>ghrfyg</h1>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>
