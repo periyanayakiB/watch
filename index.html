@@ -24,7 +24,7 @@
                         <div class="dialTime" id="currentTimeCenter"></div>
                         <div class="day" id="currentDay"></div>
                         <div class="weather">
-                            <i class="fa-solid fa-cloud"></i>
+                            <img class="weatherNow"/>
                         </div>
                     </div>
                     <div class="bottom">
@@ -37,9 +37,11 @@
                             <span id="count">00</span>
                             <br>
                             <br>
-                            <span id="hr" class="number">00</span><span class="txt">hr</span>
-                            <span id="min" class="number">00</span><span class="txt">min</span>
-                            <span id="sec" class="number">00</span><span class="txt">sec</span>
+                            <div class="timecount">
+                            <span id="hr" class="number">00</span><span class="txt">:</span>
+                            <span id="min" class="number">00</span><span class="txt">:</span>
+                            <span id="sec" class="number">00</span>
+                            </div>
                             <br><br>
                             <nav class="timer">
                                 <i class="fa-solid fa-pause" onclick="stop()" id="pause"></i>
