@@ -23,20 +23,19 @@ updateClock();
 updateDay();
 
 
-
-
 var hr = 0;
 var min = 0;
 var sec = 0;
-var count = 0;;
+var count = 0;
 
 var time = false;
 function start() {
     time = true;
-    stopWatch();
+    stopwatch();
     document.getElementById('start').style.display = "none";
     document.getElementById('pause').style.display = "block";
 }
+
 function stop() {
     time = false;
     document.getElementById('start').style.display = "block";
@@ -56,9 +55,9 @@ function reset() {
     document.getElementById('start').style.display = "block";
     document.getElementById('pause').style.display = "none";
 }
-function stopWatch() {
-    document.getElementById("main").style.visibility = "hidden";
-    document.getElementById("stopwatch").style.visibility = "visible";
+function stopwatch() {
+    // document.getElementById("main").style.visibility = "hidden"
+    // document.getElementById("stopwatch").style.visibility = "visible"
 
     if (time == true) {
         count = count + 1;
@@ -101,6 +100,11 @@ function stopWatch() {
 
     }
 }
+function stopWatch() {
+    document.getElementById("main").style.visibility = "hidden";
+    document.getElementById("stopwatch").style.visibility = "visible";
+}
+    
 function showMessages() {
     document.getElementById("main").style.visibility = "hidden";
     document.getElementById("message").style.visibility = "visible";

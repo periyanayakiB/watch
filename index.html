@@ -17,7 +17,7 @@
         </div>
         <div class="column2">
             <div class="image">
-                <img src="/assets/watch.png">
+                <img src="./assets/watch.png">
                 <div class="dial">
                     <div class="home" id="currentTime" onclick="handleHomeClick()"></div>
                     <div id="main" style="visibility: visible;">
@@ -33,20 +33,21 @@
                             <i class="fas fa-music" onclick="playMusic()"></i>
                             <i class="far fa-clock"onclick="stopWatch()"></i>
                         </nav>
-                        <!-- stopwatch------------- -->
                         <div id="stopwatch"  style="visibility: hidden;">
                             <span id="count">00</span>
-                            <nav class="countdown">
-                                <span id="hr" class="number">00</span><span class="txt">:</span>
-                                <span id="min" class="number">00</span><span class="txt">:</span>
-                                <span id="sec" class="number">00</span>
-                            </nav>
+                            <br>
+                            <br>
+                            <span id="hr" class="number">00</span><span class="txt">hr</span>
+                            <span id="min" class="number">00</span><span class="txt">min</span>
+                            <span id="sec" class="number">00</span><span class="txt">sec</span>
+                            <br><br>
                             <nav class="timer">
                                 <i class="fa-solid fa-pause" onclick="stop()" id="pause"></i>
                                 <i class="fa-solid fa-play" onclick="start()" id="start"></i>
                                 <i class="fa-solid fa-arrow-rotate-right" onclick="reset()"></i>
                             </nav>
                         </div>
+                        
 
                         <!-- Messages------------ -->
                         <div id="message" style="visibility:hidden;">
