@@ -139,6 +139,7 @@
       border-radius:20px;
       background-color:#ffffff;
       color:black;
+      overflow-y: scroll;
   }
   #displaymessage{
     height: 250px;
@@ -152,11 +153,15 @@
     margin-top:40px;
   }
   #music{
-    height: 260px;
+    height: 280px;
     width: 260px;
     position:absolute;
     left:25px;
     bottom:70px;
     border-radius:20px;
-    background-color: black;
-  }
+    background-color:black;
+}
+iframe{
+    height:350px;
+    width:270px;  
+}
