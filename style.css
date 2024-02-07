@@ -118,11 +118,11 @@
     font-size:34px;
     top:30px;
   }
-  /* .countdown{
+  .timecount{
     gap:2px;
-    margin-top:50px;
+    margin-top:30px;
     font-size:46px;
-  } */
+  }
   .timer {
     padding-left:18px;
     position:absolute;
@@ -163,6 +163,24 @@
     background-color:black;
 }
 iframe{
+  margin-top:50px;
     height:350px;
-    width:270px;  
+    width:270px;   
 }
+.weather{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weather img{
+  width: 30px;
+  height: 30px;
+}
+
+/* .weatherNow {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+} */

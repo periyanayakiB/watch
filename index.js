@@ -137,3 +137,28 @@ function hideAllContent() {
         element.classList.add('hidden');
     });
 }
+
+
+
+// const api_key="7a22cd4fa11a80dbca8fd16630fbc976";
+// const api_url='https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=${api_key}';
+// Fetch weather data from OpenWeatherMap API
+function fetchWeather() {
+    const apiKey = '7a22cd4fa11a80dbca8fd16630fbc976';
+    const city = 'Coimbatore';
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            // Assuming the weather icon code is provided in the weather data
+            const weatherIconCode = data.weather[0].icon;
+            const weatherIconUrl = `https://openweathermap.org/img/wn/${weatherIconCode}.png`;
+
+            // Update the src attribute of the weatherNow image element
+            document.querySelector('.weatherNow').src = weatherIconUrl;
+        })
+        .catch(error => {
+            console.error('Error fetching weather data:', error);
+        });
+}
