@@ -34,12 +34,15 @@ function start() {
     stopwatch();
     document.getElementById('start').style.display = "none";
     document.getElementById('pause').style.display = "block";
+    document.getElementById('reset').style.display = "block";
 }
 
 function stop() {
     time = false;
     document.getElementById('start').style.display = "block";
     document.getElementById('pause').style.display = "none";
+    document.getElementById('reset').style.display = "block";
+
 }
 function reset() {
     time = false;
@@ -53,7 +56,9 @@ function reset() {
     document.getElementById("min").innerHTML = "00";
     document.getElementById("hr").innerHTML = "00";
     document.getElementById('start').style.display = "block";
-    document.getElementById('pause').style.display = "none";
+    document.getElementById('pause').style.display = "block";
+    document.getElementById('reset').style.display = "none";
+    
 }
 function stopwatch() {
     // document.getElementById("main").style.visibility = "hidden"
@@ -103,6 +108,7 @@ function stopwatch() {
 function stopWatch() {
     document.getElementById("main").style.visibility = "hidden";
     document.getElementById("stopwatch").style.visibility = "visible";
+   
 }
     
 function showMessages() {
@@ -140,9 +146,7 @@ function hideAllContent() {
 
 
 
-// const api_key="7a22cd4fa11a80dbca8fd16630fbc976";
-// const api_url='https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=${api_key}';
-// Fetch weather data from OpenWeatherMap API
+
 function fetchWeather() {
     const apiKey = '7a22cd4fa11a80dbca8fd16630fbc976';
     const city = 'Coimbatore';
@@ -151,11 +155,8 @@ function fetchWeather() {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            // Assuming the weather icon code is provided in the weather data
             const weatherIconCode = data.weather[0].icon;
             const weatherIconUrl = `https://openweathermap.org/img/wn/${weatherIconCode}.png`;
-
-            // Update the src attribute of the weatherNow image element
             document.querySelector('.weatherNow').src = weatherIconUrl;
         })
         .catch(error => {
