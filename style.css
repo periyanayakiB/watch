@@ -154,18 +154,19 @@
     padding-right:10px;
   }
   #music{
-    height: 280px;
-    width: 260px;
+    height: 230px;
+    width: 250px;
     position:absolute;
     left:25px;
-    bottom:70px;
+    bottom:90px;
     border-radius:20px;
     background-color:black;
 }
 iframe{
-  margin-top:50px;
+  margin-top:30px;
     height:350px;
-    width:270px;   
+    width:260px; 
+    
 }
 .weather{
   display: flex;
@@ -177,10 +178,193 @@ iframe{
   height: 30px;
 }
 
-/* .weatherNow {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 50px;
-  height: 50px;
-} */
+@media only screen and (max-width: 500px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    margin: 0;
+  
+  }
+
+  h1 {
+    font-size: 40px; /* Adjust font size for smaller screens */
+  }
+
+  .container {
+    display: block 
+  }
+
+  .container .column1{
+    width:100%;
+    height:50%;
+  }
+  h1{
+   
+    padding-right:40px;
+  }
+  .container .column2 {
+    width: 100%; 
+    height:50%; 
+    background-color:white;
+    display: block; 
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 20px; 
+  }
+  .image {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    width:220px;
+    height:300px;
+    left:70px;
+    top:50px;
+  }
+
+  .image img {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    position:relative;
+    right:40px;
+    
+  }
+
+  .dial {
+    height: 155px;
+    width: 120px;
+    border-radius: 20px;
+    top:180px;
+    background-color:black;
+    position:absolute;
+    left:70px;
+  }
+
+  .home {
+    position: fixed;
+    padding-left:50px;
+  }
+
+  #main {
+    top: 20px; 
+    height: 120px; 
+    position: relative;
+  }
+
+  .day {
+    font-weight: 600;
+    font-size: 20px; 
+    padding-left: 10px;
+    margin-top: 10px; 
+  }
+
+  .dialTime {
+    font-size: 30px; 
+    font-weight: 700;
+    position: relative;
+    color: white;
+    padding-left: 10px; 
+    top: 20px;
+  }
+
+  .bottom {
+    top:83%;
+    position:fixed;
+    width:140px;
+    height:30px;
+    
+  }
+
+  nav {
+    display: flex;
+    gap: 30px; 
+    padding-left: 10px; 
+    justify-content: center;
+  }
+
+  nav i {
+    font-size: 15px;
+  }
+
+  #stopwatch {
+    height: 100px; 
+    width: 130px;
+    bottom:40px;
+    left:3px;
+    border-radius: 10px; 
+    background-color:black;
+  }
+
+  #count {
+    font-size: 20px; 
+    top: 10px; 
+    text-align: center; 
+    position:relative;
+  }
+
+  .timecount {
+    gap: 2px;
+    position:absolute;
+   left:25px;
+   top:10px;
+    font-size: 16px; 
+    text-align: center; 
+  }
+
+  .timer {
+    top: 70px; 
+    gap: 30px; 
+    justify-content: center; 
+  }
+
+  #message {
+    height: 110px; 
+    width:120px;
+    position:absolute;
+    bottom:35px;
+    left:10px;
+    border-radius: 10px; 
+    background-color: #ffffff;
+    color: rgb(5, 5, 5);
+    overflow-y: scroll;
+  }
+  .message_content{
+    width:120px;
+    height:110px;
+    overflow-y: scroll;
+  }
+  #displaymessage{
+    width:120px;
+    height:110px;
+    position:absolute;
+  }
+  #displaymessage p{
+    margin-top:10px;
+  }
+  #music{
+    width:140px;
+    height:100px;
+    position:absolute;
+    background-color:black;
+    border-radius: 10px;
+    bottom:45px;
+    left:0px; 
+   
+  }
+  .spotify{
+    width:140px;
+    height:100px;
+    left:0px;
+    overflow-y: scroll;
+  } 
+}

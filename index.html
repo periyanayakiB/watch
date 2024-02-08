@@ -33,7 +33,7 @@
                             <i class="fas fa-music" onclick="playMusic()"></i>
                             <i class="far fa-clock"onclick="stopWatch()"></i>
                         </nav>
-                        <div id="stopwatch"  style="visibility: hidden;">
+                       <div id="stopwatch"  style="visibility: hidden;">
                             <span id="count">00</span>
                             <br>
                             <br>
@@ -44,12 +44,11 @@
                             </div>
                             <br><br>
                             <nav class="timer">
-                                <i class="fa-solid fa-pause" onclick="stop()" id="pause"></i>
+                                <i class="fa-solid fa-stop" onclick="stop()" id="pause"></i>
                                 <i class="fa-solid fa-play" onclick="start()" id="start"></i>
-                                <i class="fa-solid fa-arrow-rotate-right" onclick="reset()"></i>
+                                <i class="fa-solid fa-arrow-rotate-right" onclick="reset()" id="reset"></i>
                             </nav>
-                        </div>
-                        
+                        </div> 
 
                         <!-- Messages------------ -->
                         <div id="message" style="visibility:hidden;">
@@ -72,8 +71,8 @@
 
                         <!-- musics------------ -->
                         <div id="music"style="visibility:hidden;">
-                            <iframe src="  https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3?theme=0"frameborder="0"></iframe>
-                        </div>
+                            <iframe class="spotify" src="  https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3?theme=0"frameborder="0"></iframe>
+                        </div> 
                     </div>
                 </div>
               
